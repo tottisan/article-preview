@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--Light-Grayish-Blue);
+    font-family: "Manrope", sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+article {
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 5px 5px 15px 5px var(--Grayish-Blue);
+}
+
+.article-drawer {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+/* Article Body */
+.article-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+    padding: 2rem 2rem 1rem;
+    position: relative;
+}
+
+.article-title {
+    color: var(--Very-Dark-Grayish-Blue);
+    font-weight: 700;
+}
+
+.article-subtitle, .user-date {
+    color: var(--Desaturated-Dark-Blue);
+    font-size: 0.8125rem;
+    font-weight: 500;
+}
+
+/* Footer */
+.article-user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.article-avatar {
+    align-content: center;
+    height: 100%;
+}
+
+.user-avatar {
+    display: block;
+    border-radius: 50%;
+    width: 2.1875rem;
+}
+
+.article-info {
+    flex: 1;
+}
+
+.user-name {
+    color: var(--Very-Dark-Grayish-Blue);
+    font-size: 0.8125rem;
+    font-weight: 700;
+}
+
+/* Article dialog toggle */
+.article-dialog {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  background: var(--Very-Dark-Grayish-Blue);
+  padding: .8rem;
+  position: absolute;
+}
+
+.dialog-text {
+  color: var(--Grayish-Blue);
+  font-size: .7rem;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+}
+
+.dialog-icon {
+  cursor: pointer;
+  height: 1.1rem;
+  width: 1.1rem;
+}
+
+@media (min-width: 29.6875rem) {
+  article {
+    flex-direction: column;
+    height: 32.5rem;
+    max-width: 20rem;
+  }
+
+  .article-header {
+    height: 12.5rem;
+  }
+
+  .article-drawer {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .article-title {
+    font-size: 1rem;
+    margin-bottom: .7rem;
+  }
+
+  .article-dialog {
+    border-radius: 0 0 7px 7px;
+    width: 20rem;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media (min-width: 64rem) {
+  article {
+    flex-direction: row;
+    height: unset;
+    max-width: 43.75rem;
+  }
+
+  .article-header {
+    height: unset;
+    max-width: 18.75rem;
+  }
+
+  .article-body {
+    padding: 2rem;
+  }
+
+  .article-drawer {
+    border-top-right-radius: unset;
+    border-bottom-left-radius: 10px;
+  }
+
+  .article-title {
+    font-size: 1.2rem;
+  }
+
+  .article-dialog {
+    border-radius: 7px;
+    width: 15rem;
+    right: -5rem;
+    bottom: 7rem;
+  }
+
+  /*Polygon shape */
+  .article-dialog::after {
+    background: var(--Very-Dark-Grayish-Blue);
+    content: "";
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    display: block;
+    position: absolute;
+    right: 6rem;
+    bottom: -1rem;
+    height: 1rem;
+    width: 2rem;
+  }
+}

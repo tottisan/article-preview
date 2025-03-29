@@ -6,8 +6,15 @@ shareElement.addEventListener("click", () => {
 });
 
 function createDialog(){
+  //Containers
   const shareContainer = document.createElement("div");
   shareContainer.classList.add("article-dialog");
+  
+  const rowIcons = document.createElement("div");
+  rowIcons.classList.add("dialog-row")
+
+  const rowShare = document.createElement("div");
+  rowShare.classList.add("dialog-row");
 
   //Share Text
   const shareText = document.createElement("p");
@@ -36,11 +43,14 @@ function createDialog(){
   shareIcon.classList.add("dialog-icon");
 
   //Append items to container
-  shareContainer.appendChild(shareText);
-  shareContainer.appendChild(facebookIcon);
-  shareContainer.appendChild(twitterIcon);
-  shareContainer.appendChild(pinterestIcon);
-  shareContainer.appendChild(shareIcon);
+  rowIcons.appendChild(shareText);
+  rowIcons.appendChild(facebookIcon);
+  rowIcons.appendChild(twitterIcon);
+  rowIcons.appendChild(pinterestIcon);
+  rowShare.appendChild(shareIcon);
+
+  shareContainer.appendChild(rowIcons);
+  shareContainer.appendChild(rowShare);
 
   //Append to parent container
   const articleElement = document.querySelector(".article-body");

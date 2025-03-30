@@ -93,24 +93,29 @@ article {
 /* Article dialog toggle */
 .article-dialog {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
   gap: 1rem;
   background: var(--Very-Dark-Grayish-Blue);
-  padding: .8rem;
   position: absolute;
+}
+
+.dialog-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .dialog-text {
   color: var(--Grayish-Blue);
-  font-size: .7rem;
+  font-size: .9rem;
+  font-weight: 600;
   letter-spacing: .2rem;
   text-transform: uppercase;
 }
 
 .dialog-icon {
   cursor: pointer;
-  height: 1.1rem;
-  width: 1.1rem;
 }
 
 @media (min-width: 29.6875rem) {
@@ -136,9 +141,16 @@ article {
 
   .article-dialog {
     border-radius: 0 0 7px 7px;
+    height: 4.6875rem;
     width: 20rem;
     right: 0;
     bottom: 0;
+    padding: 1rem 2rem;
+  }
+
+  .dialog-icon {
+    height: 1.2rem;
+    width: 1.2rem;
   }
 }
 
@@ -146,7 +158,7 @@ article {
   article {
     flex-direction: row;
     height: unset;
-    max-width: 43.75rem;
+    max-width: 44.6875rem;
   }
 
   .article-header {
@@ -168,10 +180,22 @@ article {
   }
 
   .article-dialog {
+    justify-content: center;
     border-radius: 7px;
-    width: 15rem;
-    right: -5rem;
-    bottom: 7rem;
+    height: 3rem;
+    width: 14rem;
+    right: -4.5rem;
+    bottom: 6rem;
+    padding: 0;
+  }
+
+  .dialog-lg {
+    display: none;
+  }
+
+  .dialog-icon {
+    height: 1.1rem;
+    width: 1.1rem;
   }
 
   /*Polygon shape */

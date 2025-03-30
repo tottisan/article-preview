@@ -14,7 +14,7 @@ function createDialog(){
   rowIcons.classList.add("dialog-row")
 
   const rowShare = document.createElement("div");
-  rowShare.classList.add("dialog-row");
+  rowShare.classList.add("dialog-row", "dialog-lg");
 
   //Share Text
   const shareText = document.createElement("p");
